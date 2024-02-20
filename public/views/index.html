@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Image Processing Project</title>
+  </head>
+  <div class="container py-5">
+    <h2 class="text-center text-uppercase">Image Processor</h2>
+    <h5 class="alert alert-dark" role="alert">Overview</h5>
+    <section>
+      <p>I will be building an API that can be used in two different ways</p>
+      <p>
+        As a simple placeholder API, the first API
+        <code>http://localhost:8080</code> allows you go to my index API. It
+        will show an interview of project UI
+      </p>
+      <p>
+        The second API <code>http://localhost:8080/api/images</code>&nbsp;- It will show a list of images which is inside of our project from folder <b>public/images</b>
+      </p>
+    </section>
+    <h5 class="alert alert-dark" role="alert">Document</h5>
+    <h6><b>API List</b></h6>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" width="5%">#</th>
+          <th scope="col" width="30%">Endpoint</th>
+          <th scope="col" width="10%">Method</th>
+          <th scope="col" width="10%">Param</th>
+          <th scope="col" width="5%">Return</th>
+          <th scope="col" width="10%">Example</th>
+          <th scope="col" width="30%">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>http://localhost:8080</td>
+          <td>GET</td>
+          <td>
+            <b>None</b>
+          </td>
+          <td>Go to Overview Image Processing</td>
+          <td>
+            <b>None</b>
+          </td>
+          <td>
+            Go to <b>Overview</b> of Image Processing UI
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>http://localhost:8080<code>/api/img/:img</code></td>
+          <td>GET</td>
+          <td>
+            <b>s</b> - Size of image with 4 options: medium, small, tiny
+            <br />
+            <b>w</b> - Width of new image(in pixel)
+            <br />
+            <b>h</b> - Height of new image(in pixel)
+          </td>
+          <td>New version of image</td>
+          <td>
+            <ol>
+              <li><a href="http://localhost:8080/api/img/fjord.jpg?s=full" target="_blank">http://localhost:8080/api/img/fjord.jpg?s=full</a> <br /></li>
+              <li><a href="http://localhost:8080/api/img/encenadaport.jpg?s=medium" target="_blank">http://localhost:8080/api/img/encenadaport.jpg?s=medium</a> <br /></li>
+              <li> <a href="http://localhost:8080/api/img/icelandwaterfall.jpg?s=small" target="_blank">http://localhost:8080/api/img/icelandwaterfall.jpg?s=small</a><br /></li>
+              <li><a href="http://localhost:8080/api/img/palmtunnel.jpg?w=200&h=300" target="_blank">http://localhost:8080/api/img/palmtunnel.jpg?w=200&h=300</a><br /></li>
+              <li><a href="http://localhost:8080/api/img/santamonica.jpg?w=40&h=40" target="_blank">http://localhost:8080/api/img/santamonica.jpg?w=40&h=40</a><br /></li>
+            </ol>
+          </td>
+          <td>
+            This API will return an image with the size according to the given
+            Size <code>(s)</code> or according to the input width <code>(w)</code> and height <code>(h)</code>.
+            <p>This API
+            prioritizes the given Size. If there are all 3 inputs <b>s</b>,
+            <b>w</b>, <b>h</b>, it will give priority to return the image with
+            the first input. into <b>s</b>.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="text-center">
+    <p><b>Author:</b> Tez Nguyen - Nguyen Trung Tai</p>
+    <p><b>Email:</b> <a href="mailto:taint28@fsoft.com.vn">taint28@fsoft.com.vn</a></p>
+  </footer>
+
+  <body></body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>
